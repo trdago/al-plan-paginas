@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Privacidad · Al Plan</title>
+<!-- Fuente: docs/privacidad.md. Colores de marca/tokens.json. Lo prueba app/test/privacidad_test.dart.
+     Con un marcador de llaves dobles sin llenar, bin/publicar-paginas no la publica. -->
+<style>
+  :root { color-scheme: light; --marca: #0B6E4F; --fondo: #F6F7F4; --superficie: #FFFFFF; --texto: #12161C; --secundario: #59606B; }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 24px 16px; background: var(--fondo); color: var(--texto);
+    font-family: Manrope, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; line-height: 1.6; }
+  main { max-width: 680px; margin: 0 auto; background: var(--superficie); border-radius: 16px; padding: 24px; }
+  .marca { color: var(--marca); font-weight: 800; margin: 0 0 16px; }
+  h1 { font-size: 24px; line-height: 1.3; margin: 0 0 4px; }
+  h2 { font-size: 18px; color: var(--marca); margin: 24px 0 8px; }
+  p, li { overflow-wrap: anywhere; }
+  p { margin: 0 0 8px; }
+  ul { margin: 0 0 8px; padding-left: 20px; }
+  .fecha { font-size: 14px; color: var(--secundario); }
+  code { font-size: 14px; }
+  a { color: var(--marca); }
+</style>
+</head>
+<body>
+<main>
+  <p class="marca">Al Plan</p>
+  <h1>Política de privacidad</h1>
+  <p class="fecha">Vigente desde el 23 de noviembre de 2026.</p>
+  <p>Al Plan es una app personal: lee los avisos de compras y transferencias de tus bancos y te muestra cómo vas contra el
+    plan que definiste en tu propio computador. La ofrece Fair Play, en Chile, que responde por tus datos. Para
+    cualquier consulta escribe a <a href="mailto:dpailahueque@fairplay-chile.cl">dpailahueque@fairplay-chile.cl</a>.</p>
+
+  <h2>Qué lee</h2>
+  <ul>
+    <li>Solo las notificaciones de las apps de estos bancos: Banco Falabella (<code>cl.android</code>), BCI
+      (<code>cl.bci.app.personas</code> y <code>cl.bci.pass</code>) y BancoEstado (<code>net.veritran.becl.prod</code>).</li>
+    <li>Las notificaciones de cualquier otra app se ignoran sin guardar ni registrar su texto.</li>
+    <li>No lee la pantalla ni tus claves, y no abre ni opera las apps de tus bancos.</li>
+    <li>La cámara y el selector de fotos se usan solo cuando tú los abres: para escanear el código QR que empareja el
+      teléfono con tu computador (esa imagen no se guarda ni se envía), o para mandar una boleta, un comprobante o una
+      cuenta. La app no lee esas fotos.</li>
+  </ul>
+
+  <h2>Qué guarda y dónde</h2>
+  <ul>
+    <li>En tu teléfono: los movimientos que se leen de esos avisos (monto, comercio, fecha, banco y últimos dígitos de la
+      tarjeta) y el plan que llega de tu computador, en una base cifrada.</li>
+    <li>En tu computador: los mismos movimientos, en tus archivos locales. También el texto de cada aviso de esos
+      bancos, publicidad incluida, para que tu consola complete lo que la app no entendió y mida qué tan bien lee cada
+      formato.</li>
+    <li>Las fotos que mandas quedan en tu teléfono, en la base cifrada, y en tu computador, donde las lee tu consola.</li>
+    <li>No hay cuentas, publicidad ni analítica de terceros.</li>
+  </ul>
+
+  <h2>Qué envía</h2>
+  <ul>
+    <li>Los movimientos, los avisos de los bancos y las fotos que mandas viajan del teléfono a tu propio computador, cifrados de extremo a extremo
+      con AES-256-GCM. La clave
+      solo la tienen tu teléfono y tu computador.</li>
+    <li>El paso intermedio es un servicio de mensajería (Supabase) que solo ve datos cifrados y no guarda los
+      movimientos ni las fotos.</li>
+    <li>El plan viaja al revés por un buzón cifrado, que conserva solo la última versión y la borra a los 40 días.</li>
+    <li>Nada se vende ni se comparte con terceros.</li>
+  </ul>
+
+  <h2>Tus controles</h2>
+  <ul>
+    <li>Puedes quitar el acceso a notificaciones en los ajustes de Android cuando quieras.</li>
+    <li>Al desinstalar la app se borran sus datos del teléfono.</li>
+    <li>Los datos de tu computador son archivos tuyos: los borras tú.</li>
+  </ul>
+</main>
+</body>
+</html>
